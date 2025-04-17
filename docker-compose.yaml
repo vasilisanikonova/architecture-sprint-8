@@ -41,7 +41,7 @@ services:
       REACT_APP_KEYCLOAK_REALM: reports-realm
       REACT_APP_KEYCLOAK_CLIENT_ID: reports-frontend
     depends_on:
-      -backend
+      - backend
   backend:
     build:
       context: ./API
@@ -53,5 +53,5 @@ services:
       KEYCLOAK_REALM: reports-realm
       KEYCLOAK_CLIEN_ID: reports-api
     depends_on:
-      -keycloak
+      - keycloak
 
